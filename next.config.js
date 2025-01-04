@@ -4,6 +4,8 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
+    basePath: '/mastering-react-landing',
+    assetPrefix: '/mastering-react-landing',
 };
 
 module.exports = nextConfig; 
