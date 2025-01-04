@@ -1,7 +1,7 @@
+import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { BookOpen, BookUser, Boxes, BrainCircuit, CheckCircle, Gem, Github, LibraryBig, Network, PencilRuler, User } from 'lucide-react'
-import Image from "next/image"
+import { BookUser, Boxes, BrainCircuit, Gem, Network, PencilRuler } from 'lucide-react'
 import Link from "next/link"
 
 const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?referralCode=C0563B0126CAF7329C80"
@@ -114,8 +114,69 @@ export default function LandingPage() {
         <section id="tech-stack" className="w-full py-12 md:py-24 lg:py-32 dark:bg-gray-800">
           <div className="container px-4 md:px-6 mx-auto">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-              Стек технологій і теми
+              Стек технологій
             </h2>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+              <div className="col-span-1 md:col-span-3">
+                <Card className="bg-gradient-to-b from-blue-500 to-blue-200">
+                  <CardContent className="p-6">
+                    <h3 className="text-2xl font-bold text-white text-center">Core Technologies</h3>
+                    <div className="flex justify-center gap-2 mt-4">
+                      <Badge className="text-sm">TypeScript</Badge>
+                      <Badge className="text-sm">React</Badge>
+                      <Badge className="text-sm">Vite</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+              <Card className="bg-gradient-to-b from-purple-500 to-purple-200">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">State Management</h3>
+                  <div className="flex flex-col gap-2">
+                    <div><Badge className="text-sm">React.Context + useReducer</Badge></div>
+                    <div><Badge className="text-sm">Redux + Rematch</Badge></div>
+                    <div><Badge className="text-sm">Zustand</Badge></div>
+                    <div><Badge className="text-sm">Recoil</Badge></div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-b from-green-500 to-green-200">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Data Fetching</h3>
+                  <div className="space-y-2">
+                    <div><Badge className="text-sm">fetch</Badge></div>
+                    <div><Badge className="text-sm">Axios</Badge></div>
+                    <div><Badge className="text-sm">TanStack Query / React Query</Badge></div>
+                    <div><Badge className="text-sm">SWR</Badge></div>
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-b from-orange-500 to-orange-200">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-white mb-4">Testing</h3>
+                  <div className="space-y-2">
+                    <div><Badge className="text-sm">Jest</Badge></div>
+                    <div><Badge className="text-sm">Vitest</Badge></div>
+                    <div><Badge className="text-sm">React Testing Library</Badge></div>
+                    <div><Badge className="text-sm">Storybook</Badge></div>
+                  </div>
+                </CardContent>
+              </Card>
+              <div className="col-span-1 md:col-span-3">
+                <Card className="bg-gradient-to-b from-yellow-500 to-yellow-200">
+                  <CardContent className="p-6">
+                    <h3 className="text-2xl font-bold text-white text-center">Tools</h3>
+                    <div className="flex justify-center gap-2 mt-4">
+                      <Badge className="text-sm">VSCode</Badge>
+                      <Badge className="text-sm">ESLint</Badge>
+                      <Badge className="text-sm">Prettier</Badge>
+                      <Badge className="text-sm">Husky</Badge>
+                      <Badge className="text-sm">Thunder Client</Badge>
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </div>
           </div>
         </section>
 
