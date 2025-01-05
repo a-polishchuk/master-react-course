@@ -10,33 +10,33 @@ export default function LandingPage() {
   return (
     <>
       <header className="sticky top-0 px-4 lg:px-6 h-14 flex items-center bg-gray-900 shadow-md">
-        <Link href="/" className="text-white font-bold text-lg">
+        <Link href="/" className="text-white font-bold text-base sm:text-lg truncate">
           🇺🇦 Опановуємо React
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
-          <Link className="text-sm font-medium text-white hover:underline underline-offset-4" href={ENROLL_LINK}>
+          <Link className="text-sm font-medium text-white hover:underline underline-offset-4 whitespace-nowrap" href={ENROLL_LINK}>
             Купити Курс
           </Link>
         </nav>
       </header>
 
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-orange-400 via-orange-300 to-amber-200">
+        <section className="w-full py-8 sm:py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-orange-400 via-orange-300 to-amber-200">
           <div className="container px-4 md:px-6 mx-auto">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900">
+                <h1 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900">
                   Опануйте всі тонкощі розробки на React
                 </h1>
-                <p className="mx-auto max-w-[700px] text-gray-800 md:text-xl">
+                <p className="mx-auto max-w-[700px] text-base sm:text-lg text-gray-800 md:text-xl">
                   Ексклюзивний всеохоплюючий Udemy курс українською!
                 </p>
               </div>
-              <div className="space-x-4">
-                <Button asChild size="lg" className="text-lg">
+              <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4">
+                <Button asChild size="lg" className="text-base sm:text-lg">
                   <Link href={ENROLL_LINK}>Купити зі знижкою!</Link>
                 </Button>
-                <Button variant="outline" asChild size="lg" className="text-lg">
+                <Button variant="outline" asChild size="lg" className="text-base sm:text-lg">
                   <Link href="#features">Дізнатися більше</Link>
                 </Button>
               </div>
@@ -44,16 +44,16 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="features" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section id="features" className="w-full py-8 sm:py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6 sm:mb-8">
               Чому саме цей курс?
             </h2>
-            <div className="grid gap-10 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
+            <div className="grid gap-6 sm:gap-8 md:gap-10 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 justify-items-center">
               <Card>
-                <CardContent className="flex flex-col items-center space-y-2 p-6">
-                  <Gem strokeWidth={1} className="h-14 w-14" />
-                  <h3 className="text-xl font-bold">Ексклюзивний Контент</h3>
+                <CardContent className="flex flex-col items-center space-y-2 p-4 sm:p-6">
+                  <Gem strokeWidth={1} className="h-12 w-12 sm:h-14 sm:w-14" />
+                  <h3 className="text-lg sm:text-xl font-bold">Ексклюзивний Контент</h3>
                   <p className="text-center text-gray-500 dark:text-gray-400">
                     Ви отримаєте доступ до Github репозиторію зі спеціально розробленими прикладами.
                     Весь <strong>контент курсу унікальний</strong> і оновлюється з часом.
@@ -111,17 +111,17 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="tech-stack" className="w-full py-12 md:py-24 lg:py-32 dark:bg-gray-800">
+        <section id="tech-stack" className="w-full py-8 sm:py-12 md:py-24 lg:py-32 dark:bg-gray-800">
           <div className="container px-4 md:px-6 mx-auto">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-6 sm:mb-8">
               Стек технологій
             </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto">
               <div className="col-span-1 md:col-span-3">
                 <Card className="bg-gradient-to-b from-blue-500 to-blue-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold text-white text-center">Core Technologies</h3>
-                    <div className="flex justify-center gap-2 mt-4">
+                  <CardContent className="p-4 sm:p-6">
+                    <h3 className="text-xl sm:text-2xl font-bold text-white text-center">Core Technologies</h3>
+                    <div className="flex flex-wrap justify-center gap-2 mt-4">
                       <Badge className="text-sm">TypeScript</Badge>
                       <Badge className="text-sm">React</Badge>
                       <Badge className="text-sm">Vite</Badge>
@@ -131,7 +131,7 @@ export default function LandingPage() {
               </div>
               <Card className="bg-gradient-to-b from-purple-500 to-purple-200">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">State Management</h3>
+                  <h3 className="text-xl font-bold text-white mb-4 text-center">State Management</h3>
                   <div className="flex flex-col gap-2">
                     <div><Badge className="text-sm">React.Context + useReducer</Badge></div>
                     <div><Badge className="text-sm">Redux + Rematch</Badge></div>
@@ -142,7 +142,7 @@ export default function LandingPage() {
               </Card>
               <Card className="bg-gradient-to-b from-green-500 to-green-200">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Data Fetching</h3>
+                  <h3 className="text-xl font-bold text-white mb-4 text-center">Data Fetching</h3>
                   <div className="space-y-2">
                     <div><Badge className="text-sm">fetch</Badge></div>
                     <div><Badge className="text-sm">Axios</Badge></div>
@@ -153,7 +153,7 @@ export default function LandingPage() {
               </Card>
               <Card className="bg-gradient-to-b from-orange-500 to-orange-200">
                 <CardContent className="p-6">
-                  <h3 className="text-xl font-bold text-white mb-4">Testing</h3>
+                  <h3 className="text-xl font-bold text-white mb-4 text-center">Testing</h3>
                   <div className="space-y-2">
                     <div><Badge className="text-sm">Jest</Badge></div>
                     <div><Badge className="text-sm">Vitest</Badge></div>
@@ -165,8 +165,8 @@ export default function LandingPage() {
               <div className="col-span-1 md:col-span-3">
                 <Card className="bg-gradient-to-b from-yellow-500 to-yellow-200">
                   <CardContent className="p-6">
-                    <h3 className="text-2xl font-bold text-white text-center">Tools</h3>
-                    <div className="flex justify-center gap-2 mt-4">
+                    <h3 className="text-xl font-bold text-white text-center">Tools</h3>
+                    <div className="flex flex-wrap justify-center gap-2 mt-4">
                       <Badge className="text-sm">VSCode</Badge>
                       <Badge className="text-sm">ESLint</Badge>
                       <Badge className="text-sm">Prettier</Badge>
@@ -180,19 +180,19 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="enroll" className="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <section id="enroll" className="w-full py-8 sm:py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
           <div className="container mx-auto px-4 md:px-6">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Чи готові ви Опанувати React?
                 </h2>
-                <p className="mx-auto max-w-[600px] text-gray-500 md:text-xl dark:text-gray-400">
+                <p className="mx-auto max-w-[600px] text-base sm:text-lg text-gray-500 md:text-xl dark:text-gray-400">
                   Купіть курс за <strong>найменшою можливою ціною</strong> на Udemy і почніть свій шлях React розробника!
                 </p>
               </div>
-              <div className="w-full max-w-sm space-y-2">
-                <Button size="lg" asChild className="text-lg">
+              <div className="w-full max-w-[280px] sm:max-w-sm space-y-2">
+                <Button size="lg" asChild className="w-full text-base sm:text-lg">
                   <Link href={ENROLL_LINK} target="_blank" rel="noopener noreferrer">
                     Купити на Udemy
                   </Link>
@@ -203,7 +203,7 @@ export default function LandingPage() {
         </section>
       </main>
 
-      <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center px-4 md:px-6 border-t justify-center">
+      <footer className="flex flex-col gap-2 sm:flex-row py-4 sm:py-6 w-full shrink-0 items-center px-4 md:px-6 border-t justify-center">
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center">© {new Date().getFullYear()} Опановуємо React. Всі права захищені.</p>
       </footer>
     </>
