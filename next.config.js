@@ -5,7 +5,8 @@ const nextConfig = {
         unoptimized: true,
     },
     trailingSlash: true,
-    assetPrefix: 'http://mastering-react.tech',
+    assetPrefix: '/',
+    basePath: '',
 };
 
 module.exports = nextConfig; 
