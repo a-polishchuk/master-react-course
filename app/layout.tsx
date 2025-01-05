@@ -16,15 +16,15 @@ const geistMono = localFont({
 export const metadata: Metadata = {
   title: "Опановуємо React",
   description: "Вивчайте React з нуля українською",
-  manifest: "/site.webmanifest",
+  manifest: "/master-react-course/site.webmanifest",
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" },
-      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" }
+      { url: "/master-react-course/favicon.ico" },
+      { url: "/master-react-course/favicon-16x16.png", sizes: "16x16", type: "image/png" },
+      { url: "/master-react-course/favicon-32x32.png", sizes: "32x32", type: "image/png" }
     ],
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+      { url: "/master-react-course/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
     ]
   }
 };
