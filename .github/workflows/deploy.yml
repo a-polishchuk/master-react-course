@@ -28,6 +28,12 @@ jobs:
       - name: Add custom domain
         run: echo "mastering-react.tech" > out/CNAME
 
+      - name: Fix asset paths
+        run: |
+          cd out
+          find . -type f -name "*.html" -exec sed -i 's/"\/_next/"\.\/_next/g' {} +
+          find . -type f -name "*.html" -exec sed -i "s/'\\/_next/'.\/_next/g" {} +
+
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
         with:
