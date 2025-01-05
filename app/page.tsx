@@ -187,7 +187,7 @@ export default function LandingPage() {
                 <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
                   Чи готові ви Опанувати React?
                 </h2>
-                <p className="mx-auto max-w-[600px] text-base sm:text-lg text-gray-500 md:text-xl dark:text-gray-400">
+                <p className="mx-auto max-w-[600px] text-base sm:text-lg md:text-xl">
                   Купіть курс за <strong>найменшою можливою ціною</strong> на Udemy і почніть свій шлях React розробника!
                 </p>
               </div>

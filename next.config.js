@@ -7,7 +7,7 @@ const nextConfig = {
     basePath: '/master-react-course',
     assetPrefix: '/master-react-course/',
     experimental: {
-        prefetchRSC: false
+        ppr: false
     }
 };
 

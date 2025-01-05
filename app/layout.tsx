@@ -28,11 +28,20 @@ export const metadata: Metadata = {
     title: 'Опановуємо React',
     description: 'Вивчайте React з нуля українською',
     siteName: 'Опановуємо React',
+    images: [
+      {
+        url: '/master-react-course/android-chrome-512x512.png',
+        width: 512,
+        height: 512,
+        alt: 'Опановуємо React - Логотип курсу',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Опановуємо React',
     description: 'Вивчайте React з нуля українською',
+    images: ['/master-react-course/android-chrome-512x512.png'],
   },
   robots: {
     index: true,
