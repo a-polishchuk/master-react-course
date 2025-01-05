@@ -6,6 +6,9 @@ const nextConfig = {
     },
     basePath: '/master-react-course',
     assetPrefix: '/master-react-course/',
+    experimental: {
+        serverActions: false,
+    },
 };
 
 module.exports = nextConfig;
