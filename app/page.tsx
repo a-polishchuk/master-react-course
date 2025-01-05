@@ -4,6 +4,8 @@ import { Card, CardContent } from "@/components/ui/card"
 import { BookUser, Boxes, BrainCircuit, Gem, Network, PencilRuler } from 'lucide-react'
 import Link from "next/link"
 
+export const dynamic = 'force-static';
+
 const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?couponCode=350BAEC300A5D4680059"
 
 export default function LandingPage() {
