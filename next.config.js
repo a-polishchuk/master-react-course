@@ -4,7 +4,7 @@ const nextConfig = {
     images: {
         unoptimized: true,
     },
-    assetPrefix: '/master-react-course',
+    basePath: '/master-react-course',
 };
 
 module.exports = nextConfig; 
