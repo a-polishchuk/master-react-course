@@ -1,15 +1,25 @@
+'use client'
+
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BookUser, Boxes, BrainCircuit, Gem, Network, PencilRuler } from 'lucide-react'
 import Link from "next/link"
+import { useCallback } from "react"
+import type { Engine } from "tsparticles-engine"
+import Particles from "react-tsparticles"
+import { loadTrianglesPreset } from "tsparticles-preset-triangles"
 
 const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?couponCode=350BAEC300A5D4680059"
 
 export default function LandingPage() {
+  const particlesInit = useCallback(async (engine: Engine) => {
+    await loadTrianglesPreset(engine)
+  }, [])
+
   return (
     <>
-      <header className="sticky top-0 px-4 lg:px-6 h-14 flex items-center bg-gray-900 shadow-md">
+      <header className="sticky top-0 px-4 lg:px-6 h-14 flex items-center bg-gray-900 shadow-md z-50">
         <Link href="/" className="text-white font-bold text-base sm:text-lg truncate">
           🇺🇦 Опановуємо React
         </Link>
@@ -21,8 +31,55 @@ export default function LandingPage() {
       </header>
 
       <main className="flex-1">
-        <section className="w-full py-8 sm:py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-orange-400 via-orange-300 to-amber-200">
-          <div className="container px-4 md:px-6 mx-auto">
+        <section className="relative w-full py-8 sm:py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-orange-400 via-orange-300 to-amber-200">
+          <div style={{ clipPath: 'inset(0)' }} className="absolute inset-0">
+            <div className="relative w-full h-full">
+              <Particles
+                id="tsparticles"
+                init={particlesInit}
+                options={{
+                  preset: "triangles",
+                  background: {
+                    opacity: 0
+                  },
+                  particles: {
+                    color: {
+                      value: "#FFFFFF"
+                    },
+                    opacity: {
+                      value: 0.5,
+                    },
+                    links: {
+                      opacity: 0.1,
+                      color: "#FFFFFF",
+                    },
+                    move: {
+                      enable: true,
+                      speed: 0.5,
+                      direction: "none",
+                      random: false,
+                      straight: false,
+                      outModes: "bounce",
+                      attract: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 1200
+                      }
+                    },
+                    number: {
+                      value: 100,
+                      density: {
+                        enable: true,
+                        value_area: 800
+                      }
+                    }
+                  }
+                }}
+                className="absolute inset-0"
+              />
+            </div>
+          </div>
+          <div className="container px-4 md:px-6 mx-auto relative z-10">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900">
