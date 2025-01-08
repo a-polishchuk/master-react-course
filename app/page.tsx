@@ -12,6 +12,10 @@ import { loadTrianglesPreset } from "tsparticles-preset-triangles"
 
 const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?couponCode=350BAEC300A5D4680059"
 
+function TechBadge({ name }: { name: string }) {
+  return <Badge className="text-sm">{name}</Badge>
+}
+
 export default function LandingPage() {
   const particlesInit = useCallback(async (engine: Engine) => {
     await loadTrianglesPreset(engine)
@@ -174,65 +178,74 @@ export default function LandingPage() {
               Стек технологій
             </h2>
             <div className="grid gap-4 sm:gap-6 md:gap-8 grid-cols-1 md:grid-cols-3 max-w-5xl mx-auto">
-              <div className="col-span-1 md:col-span-3">
-                <Card className="bg-gradient-to-b from-blue-500 to-blue-200">
-                  <CardContent className="p-4 sm:p-6">
-                    <h3 className="text-xl sm:text-2xl font-bold text-white text-center">Core Technologies</h3>
-                    <div className="flex flex-wrap justify-center gap-2 mt-4">
-                      <Badge className="text-sm">TypeScript</Badge>
-                      <Badge className="text-sm">React</Badge>
-                      <Badge className="text-sm">Vite</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-              <Card className="bg-gradient-to-b from-purple-500 to-purple-200">
+              <Card className="bg-gradient-to-b from-blue-500 to-blue-100">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-white text-center">Core</h3>
+                  <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    <TechBadge name="JavaScript" />
+                    <TechBadge name="TypeScript" />
+                    <TechBadge name="React" />
+                    <TechBadge name="Vite" />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-b from-purple-500 to-purple-100">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4 text-center">State Management</h3>
-                  <div className="flex flex-col gap-2">
-                    <div><Badge className="text-sm">React.Context + useReducer</Badge></div>
-                    <div><Badge className="text-sm">Redux + Rematch</Badge></div>
-                    <div><Badge className="text-sm">Zustand</Badge></div>
-                    <div><Badge className="text-sm">Recoil</Badge></div>
+                  <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    <TechBadge name="Context + useReducer" />
+                    <TechBadge name="Redux + Rematch" />
+                    <TechBadge name="Zustand" />
+                    <TechBadge name="Recoil" />
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-gradient-to-b from-green-500 to-green-200">
+              <Card className="bg-gradient-to-b from-green-500 to-green-100">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4 text-center">Data Fetching</h3>
-                  <div className="space-y-2">
-                    <div><Badge className="text-sm">fetch</Badge></div>
-                    <div><Badge className="text-sm">Axios</Badge></div>
-                    <div><Badge className="text-sm">TanStack Query / React Query</Badge></div>
-                    <div><Badge className="text-sm">SWR</Badge></div>
+                  <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    <TechBadge name="fetch" />
+                    <TechBadge name="Axios" />
+                    <TechBadge name="React Query" />
+                    <TechBadge name="SWR" />
                   </div>
                 </CardContent>
               </Card>
-              <Card className="bg-gradient-to-b from-orange-500 to-orange-200">
+              <Card className="bg-gradient-to-b from-orange-500 to-orange-100">
                 <CardContent className="p-6">
                   <h3 className="text-xl font-bold text-white mb-4 text-center">Testing</h3>
-                  <div className="space-y-2">
-                    <div><Badge className="text-sm">Jest</Badge></div>
-                    <div><Badge className="text-sm">Vitest</Badge></div>
-                    <div><Badge className="text-sm">React Testing Library</Badge></div>
-                    <div><Badge className="text-sm">Storybook</Badge></div>
+                  <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    <TechBadge name="Jest" />
+                    <TechBadge name="Vitest" />
+                    <TechBadge name="React Testing Library" />
+                    <TechBadge name="Storybook" />
                   </div>
                 </CardContent>
               </Card>
-              <div className="col-span-1 md:col-span-3">
-                <Card className="bg-gradient-to-b from-yellow-500 to-yellow-200">
-                  <CardContent className="p-6">
-                    <h3 className="text-xl font-bold text-white text-center">Tools</h3>
-                    <div className="flex flex-wrap justify-center gap-2 mt-4">
-                      <Badge className="text-sm">VSCode</Badge>
-                      <Badge className="text-sm">ESLint</Badge>
-                      <Badge className="text-sm">Prettier</Badge>
-                      <Badge className="text-sm">Husky</Badge>
-                      <Badge className="text-sm">Thunder Client</Badge>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
+              <Card className="bg-gradient-to-b from-yellow-500 to-yellow-100">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-white text-center">Tools</h3>
+                  <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    <TechBadge name="Git" />
+                    <TechBadge name="VSCode" />
+                    <TechBadge name="ESLint" />
+                    <TechBadge name="Prettier" />
+                    <TechBadge name="Husky" />
+                    <TechBadge name="Thunder Client" />
+                  </div>
+                </CardContent>
+              </Card>
+              <Card className="bg-gradient-to-b from-cyan-500 to-cyan-100">
+                <CardContent className="p-6">
+                  <h3 className="text-xl font-bold text-white text-center">And more</h3>
+                  <div className="flex flex-wrap justify-center gap-2 mt-4">
+                    <TechBadge name="React Hooks" />
+                    <TechBadge name="Custom Hooks" />
+                    <TechBadge name="React 19" />
+                    <TechBadge name="..." />
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </div>
         </section>
