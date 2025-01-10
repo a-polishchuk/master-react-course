@@ -126,16 +126,20 @@ export default function LandingPage() {
                 <p className="text-sm text-gray-200">Днів Гарантії</p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold text-white">✓</h3>
-                <p className="text-sm text-gray-200">Сертифікат по Закінченню</p>
-              </div>
-              <div className="space-y-2">
                 <h3 className="text-3xl font-bold text-white">370+</h3>
                 <p className="text-sm text-gray-200">Студентів</p>
               </div>
               <div className="space-y-2">
                 <h3 className="text-3xl font-bold text-white">4.8/5</h3>
                 <p className="text-sm text-gray-200">Рейтинг</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">✓</h3>
+                <p className="text-sm text-gray-200">Доступ до Репозиторію</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">✓</h3>
+                <p className="text-sm text-gray-200">Сертифікат по Закінченню</p>
               </div>
             </div>
           </div>
