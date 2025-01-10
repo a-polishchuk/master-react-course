@@ -95,7 +95,7 @@ export default function LandingPage() {
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4">
-                <Button asChild size="lg" className="text-base sm:text-lg">
+                <Button asChild size="lg" className="text-base sm:text-lg font-bold">
                   <Link href={ENROLL_LINK}>Купити зі знижкою!</Link>
                 </Button>
                 <Button variant="outline" asChild size="lg" className="text-base sm:text-lg">
@@ -373,7 +373,7 @@ export default function LandingPage() {
             </p>
             <Button asChild size="lg" className="text-lg bg-orange-500 hover:bg-orange-600">
               <Link href={ENROLL_LINK}>
-                Зареєструватися на Курс
+                Купити на Udemy
               </Link>
             </Button>
           </div>
