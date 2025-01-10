@@ -10,7 +10,7 @@ import type { Engine } from "tsparticles-engine"
 import Particles from "react-tsparticles"
 import { loadTrianglesPreset } from "tsparticles-preset-triangles"
 
-const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?couponCode=350BAEC300A5D4680059"
+const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?couponCode=EC450CA830895E9DC657"
 
 function TechBadge({ name }: { name: string }) {
   return <Badge className="text-sm">{name}</Badge>
