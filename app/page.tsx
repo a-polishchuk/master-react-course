@@ -3,12 +3,13 @@
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { BookUser, Boxes, BrainCircuit, Gem, Network, PencilRuler } from 'lucide-react'
+import { BookUser, Boxes, BrainCircuit, Gem, Network, PencilRuler, Star } from 'lucide-react'
 import Link from "next/link"
 import { useCallback } from "react"
 import type { Engine } from "tsparticles-engine"
 import Particles from "react-tsparticles"
 import { loadTrianglesPreset } from "tsparticles-preset-triangles"
+import { ReviewCard } from "@/components/ReviewCard"
 
 const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?couponCode=EC450CA830895E9DC657"
 
@@ -103,6 +104,13 @@ export default function LandingPage() {
               </div>
             </div>
           </div>
+        </section>
+
+        <section className="w-full py-12 bg-gray-900 px-12 flex overflow-x-auto gap-8">
+          <ReviewCard author="Александр" text="Чудовий курс. Поки що найкраще, що я проходив. До того ж, українською. Автору наснаги, творчого та фінансового успіху. Додав автора у відслідковування" />
+          <ReviewCard author="Vitalii B." text="Дякую за курс. Якісний звук, гарна манера подачі матеріалу, цікава ідея та структура курсу. Ну і звісно окрема подяка за курс українською!" />
+          <ReviewCard author="Oleh M." text="Дуже хороший курс, шкода що раніше його не знайшов." />
+          <ReviewCard author="Ivanna M." text="Структурована інформація в доступному форматі пояснень. Дякую за такий корисний контент!" />
         </section>
 
         <section id="features" className="w-full py-8 sm:py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
@@ -250,25 +258,85 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section id="enroll" className="w-full py-8 sm:py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
-          <div className="container mx-auto px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-                  Чи готові ви Опанувати React?
-                </h2>
-                <p className="mx-auto max-w-[600px] text-base sm:text-lg md:text-xl">
-                  Купіть курс за <strong>найменшою можливою ціною</strong> на Udemy і почніть свій шлях React розробника!
-                </p>
+        {/* <section className="w-full py-12 md:py-24 bg-gradient-to-b from-orange-50 to-orange-100 dark:from-gray-800 dark:to-gray-900">
+          <div className="container px-4 md:px-6 mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl mb-8">
+              Спеціальна Пропозиція
+            </h2>
+            <div className="max-w-2xl mx-auto mb-8">
+              <Card className="relative overflow-hidden">
+                <CardContent className="p-6">
+                  <div className="absolute top-4 right-4">
+                    <Badge className="bg-red-500">-70% ЗНИЖКА</Badge>
+                  </div>
+                  <h3 className="text-2xl font-bold mb-2">Повний Курс</h3>
+                  <div className="flex justify-center items-center gap-4 mb-4">
+                    <span className="text-3xl font-bold">₴1,499</span>
+                    <span className="text-xl text-gray-500 line-through">₴4,999</span>
+                  </div>
+                  <ul className="text-left space-y-2 mb-6">
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      26+ годин відео-контенту
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      Доступ до Github репозиторію
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      Інтерактивні завдання
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      Довічний доступ
+                    </li>
+                    <li className="flex items-center">
+                      <span className="mr-2">✓</span>
+                      Сертифікат про завершення
+                    </li>
+                  </ul>
+                  <Button asChild size="lg" className="w-full text-lg">
+                    <Link href={ENROLL_LINK}>
+                      Почати Навчання Зараз!
+                    </Link>
+                  </Button>
+                  <p className="text-sm text-gray-500 mt-4">
+                    * Знижка діє обмежений час
+                  </p>
+                </CardContent>
+              </Card>
+            </div>
+            <div className="flex justify-center gap-4 flex-wrap">
+              <div className="flex items-center">
+                <span className="mr-2">🎓</span>
+                <span>1000+ студентів</span>
               </div>
-              <div className="w-full max-w-[280px] sm:max-w-sm space-y-2">
-                <Button size="lg" asChild className="w-full text-base sm:text-lg">
-                  <Link href={ENROLL_LINK} target="_blank" rel="noopener noreferrer">
-                    Купити на Udemy
-                  </Link>
-                </Button>
+              <div className="flex items-center">
+                <span className="mr-2">⭐</span>
+                <span>4.8/5 рейтинг</span>
+              </div>
+              <div className="flex items-center">
+                <span className="mr-2">🔄</span>
+                <span>30 днів гарантії</span>
               </div>
             </div>
+          </div>
+        </section> */}
+
+        <section className="w-full py-12 bg-gray-900 text-white">
+          <div className="container px-4 md:px-6 mx-auto text-center">
+            <h2 className="text-2xl sm:text-3xl font-bold mb-4">
+              Готові Стати React Розробником?
+            </h2>
+            <p className="mb-8 text-gray-300">
+              Приєднуйтесь до 370+ студентів, які вже трансформують свою кар'єру!
+            </p>
+            <Button asChild size="lg" className="text-lg bg-orange-500 hover:bg-orange-600">
+              <Link href={ENROLL_LINK}>
+                Зареєструватися на Курс
+              </Link>
+            </Button>
           </div>
         </section>
       </main>
