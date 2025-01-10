@@ -106,7 +106,42 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full py-6 sm:py-12 px-8 sm:px-12 gap-4 sm:gap-8 bg-gray-900 flex overflow-x-auto">
+        <section id="stats" className="w-full py-12 bg-gray-900">
+          <div className="container px-4 md:px-6 mx-auto">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 text-center">
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">🇺🇦</h3>
+                <p className="text-sm text-gray-200">Мова Курсу</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">19</h3>
+                <p className="text-sm text-gray-200">Годин Лекцій</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">26</h3>
+                <p className="text-sm text-gray-200">Інтерактивних Вправ</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">30</h3>
+                <p className="text-sm text-gray-200">Днів Гарантії</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">✓</h3>
+                <p className="text-sm text-gray-200">Сертифікат по Закінченню</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">370+</h3>
+                <p className="text-sm text-gray-200">Студентів</p>
+              </div>
+              <div className="space-y-2">
+                <h3 className="text-3xl font-bold text-white">4.8/5</h3>
+                <p className="text-sm text-gray-200">Рейтинг</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="reviews" className="w-full py-6 sm:py-12 px-8 sm:px-12 gap-4 sm:gap-8 flex overflow-x-auto bg-slate-200">
           <ReviewCard author="Александр" text="Чудовий курс. Поки що найкраще, що я проходив. До того ж, українською. Автору наснаги, творчого та фінансового успіху. Додав автора у відслідковування" />
           <ReviewCard author="Vitalii B." text="Дякую за курс. Якісний звук, гарна манера подачі матеріалу, цікава ідея та структура курсу. Ну і звісно окрема подяка за курс українською!" />
           <ReviewCard author="Oleh M." text="Дуже хороший курс, шкода що раніше його не знайшов." />
