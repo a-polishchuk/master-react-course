@@ -8,7 +8,7 @@ export type ReviewCardProps = {
 
 export function ReviewCard({ text, author }: ReviewCardProps) {
     return (
-        <Card className="md:min-w-[350px] md:w-[25%]">
+        <Card className="min-w-[300px] md:min-w-[350px] md:w-[25%]">
             <CardContent className="p-4">
                 <div className="flex justify-between items-center mb-2">
                     <p className="font-semibold">{author}</p>
@@ -20,7 +20,7 @@ export function ReviewCard({ text, author }: ReviewCardProps) {
                         <Star className="w-5 h-5 text-yellow-400 fill-yellow-400" />
                     </div>
                 </div>
-                <p className="text-gray-600 dark:text-gray-300 mb-4">
+                <p className="text-gray-600 dark:text-gray-300 mt-2 mb-2">
                     {text}
                 </p>
             </CardContent>

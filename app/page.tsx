@@ -106,7 +106,7 @@ export default function LandingPage() {
           </div>
         </section>
 
-        <section className="w-full py-12 bg-gray-900 px-12 flex overflow-x-auto gap-8">
+        <section className="w-full py-6 sm:py-12 px-8 sm:px-12 gap-4 sm:gap-8 bg-gray-900 flex overflow-x-auto">
           <ReviewCard author="Александр" text="Чудовий курс. Поки що найкраще, що я проходив. До того ж, українською. Автору наснаги, творчого та фінансового успіху. Додав автора у відслідковування" />
           <ReviewCard author="Vitalii B." text="Дякую за курс. Якісний звук, гарна манера подачі матеріалу, цікава ідея та структура курсу. Ну і звісно окрема подяка за курс українською!" />
           <ReviewCard author="Oleh M." text="Дуже хороший курс, шкода що раніше його не знайшов." />
