@@ -16,8 +16,8 @@ const geistMono = localFont({
 
 export const metadata: Metadata = {
   title: 'Опановуємо React',
-  description: 'Вивчайте React з нуля українською',
-  keywords: 'React, JavaScript, TypeScript, веб-розробка, фронтенд, курси українською',
+  description: 'Вивчайте React.js з нуля українською',
+  keywords: 'React, React.js, Next.js, JavaScript, TypeScript, frontend, веб-розробка, фронтенд',
   manifest: '/master-react-course/site.webmanifest',
   authors: [{ name: 'Andrii Polishchuk' }],
   metadataBase: new URL('https://a-polishchuk.github.io/master-react-course'),
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     locale: 'uk_UA',
     url: 'https://a-polishchuk.github.io/master-react-course',
     title: 'Опановуємо React',
-    description: 'Вивчайте React з нуля українською',
+    description: 'Вивчайте React.js з нуля українською',
     siteName: 'Опановуємо React',
     images: [
       {
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Опановуємо React',
-    description: 'Вивчайте React з нуля українською',
+    description: 'Вивчайте React.js з нуля українською',
     images: ['/master-react-course/android-chrome-512x512.png'],
   },
   robots: {
@@ -85,13 +85,13 @@ export default function RootLayout({
               '@context': 'https://schema.org',
               '@type': 'Course',
               name: 'Опановуємо React',
-              description: 'Вивчайте React з нуля українською',
+              description: 'Вивчайте React.js з нуля українською',
               provider: {
                 '@type': 'Person',
                 name: 'Andrii Polishchuk',
               },
               inLanguage: 'uk',
-              educationalLevel: 'Beginner to Advanced',
+              educationalLevel: 'Для початківців',
             }),
           }}
         />

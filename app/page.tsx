@@ -26,7 +26,7 @@ export default function LandingPage() {
     <>
       <header className="sticky top-0 px-4 lg:px-6 h-14 flex items-center bg-gray-900 shadow-md z-50">
         <Link href="/" className="text-white font-bold text-base sm:text-lg truncate">
-          🇺🇦 Опановуємо React
+          Udemy Курс "Опановуємо React"
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium text-white hover:underline underline-offset-4 whitespace-nowrap" href={ENROLL_LINK}>
@@ -88,18 +88,17 @@ export default function LandingPage() {
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
                 <h1 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900">
-                  Опануйте всі тонкощі розробки на React
+                  Опануйте всі тонкощі розробки на React.js
                 </h1>
                 <p className="mx-auto max-w-[700px] text-base sm:text-lg text-gray-800 md:text-xl">
-                  Ексклюзивний всеохоплюючий Udemy курс українською!
+                  Ексклюзивний всеохоплюючий <strong>React.js+Typescript</strong> курс Українською!
                 </p>
               </div>
               <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4">
-                <Button asChild size="lg" className="text-base sm:text-lg font-bold">
-                  <Link href={ENROLL_LINK}>Купити зі знижкою!</Link>
-                </Button>
-                <Button variant="outline" asChild size="lg" className="text-base sm:text-lg">
-                  <Link href="#features">Дізнатися більше</Link>
+                <Button asChild size="lg" className="text-base sm:text-lg font-bold flex items-center gap-2">
+                  <Link href={ENROLL_LINK}>
+                    Купити зі знижкою!
+                  </Link>
                 </Button>
               </div>
             </div>
