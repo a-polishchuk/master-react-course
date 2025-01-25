@@ -114,7 +114,7 @@ export default function LandingPage() {
                 <p className="text-sm text-gray-200">Мова Курсу</p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold text-white">19</h3>
+                <h3 className="text-3xl font-bold text-white">22</h3>
                 <p className="text-sm text-gray-200">Годин Лекцій</p>
               </div>
               <div className="space-y-2">
@@ -126,7 +126,7 @@ export default function LandingPage() {
                 <p className="text-sm text-gray-200">Днів Гарантії</p>
               </div>
               <div className="space-y-2">
-                <h3 className="text-3xl font-bold text-white">370+</h3>
+                <h3 className="text-3xl font-bold text-white">380+</h3>
                 <p className="text-sm text-gray-200">Студентів</p>
               </div>
               <div className="space-y-2">
@@ -303,7 +303,7 @@ export default function LandingPage() {
               Готові Стати React Розробником?
             </h2>
             <p className="mb-8 text-gray-300">
-              Приєднуйтесь до 370+ студентів, які вже трансформують свою кар'єру!
+              Приєднуйтесь до 380+ студентів, які вже трансформують свою кар'єру!
             </p>
             <Button asChild size="lg" className="text-lg bg-orange-500 hover:bg-orange-600">
               <Link href={ENROLL_LINK}>
