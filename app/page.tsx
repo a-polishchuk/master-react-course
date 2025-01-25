@@ -85,11 +85,15 @@ export default function LandingPage() {
           <div className="container px-4 md:px-6 mx-auto relative z-10">
             <div className="flex flex-col items-center space-y-4 text-center">
               <div className="space-y-2">
-                <h1 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900">
+                <h1 className="text-2xl sm:text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-gray-900"
+                  style={{ textShadow: '2px 2px #0003' }}>
                   Опануйте всі тонкощі розробки на React.js
                 </h1>
                 <p className="mx-auto max-w-[700px] text-base sm:text-lg text-gray-800 md:text-xl">
                   Ексклюзивний всеохоплюючий <strong>React.js+Typescript</strong> курс Українською!
+                </p>
+                <p className="mx-auto max-w-[700px] text-base sm:text-lg text-gray-800 md:text-xl">
+                  Від "Hello, world!" до складних комплексних проектів.
                 </p>
               </div>
               <div className="pt-8">
@@ -98,16 +102,11 @@ export default function LandingPage() {
                     <Link href={ENROLL_LINK}>Купити Курс</Link>
                   </Button>
                   <div className="absolute -top-3 -right-3 bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded">
-                    -85%
+                    Знижка 85%
                   </div>
                 </div>
               </div>
-              <div>
-                <div className="flex items-center justify-center text-lg sm:text-xl">
-                  До закінчення акції залишилось:
-                </div>
-                <CountdownTimer />
-              </div>
+              <CountdownTimer />
             </div>
           </div>
         </section>
@@ -318,7 +317,7 @@ export default function LandingPage() {
             </Button>
           </div>
         </section>
-      </main>
+      </main >
 
       <footer className="flex flex-col gap-2 sm:flex-row py-4 sm:py-6 w-full shrink-0 items-center px-4 md:px-6 border-t justify-center">
         <p className="text-xs text-gray-500 dark:text-gray-400 text-center">© {new Date().getFullYear()} Опановуємо React. Всі права захищені.</p>

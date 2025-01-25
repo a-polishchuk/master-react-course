@@ -92,6 +92,17 @@ export default function RootLayout({
               },
               inLanguage: 'uk',
               educationalLevel: 'Для початківців',
+              offers: {
+                '@type': 'Offer',
+                price: '12.99',
+                priceCurrency: 'USD',
+                availability: 'https://schema.org/InStock'
+              },
+              aggregateRating: {
+                '@type': 'AggregateRating',
+                ratingValue: '4.85',
+                reviewCount: '380'
+              }
             }),
           }}
         />

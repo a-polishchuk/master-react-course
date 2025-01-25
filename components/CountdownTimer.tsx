@@ -20,20 +20,20 @@ export function CountdownTimer() {
     return (
         <NumberFlowGroup>
             <div className="text-xl sm:text-2xl flex items-baseline font-semibold">
-                <NumberFlow trend={-1} value={hh} format={{ minimumIntegerDigits: 2 }} suffix=" годин " />
+                <span>Знижка діє&nbsp;</span>
+                <NumberFlow trend={-1} value={hh} format={{ minimumIntegerDigits: 2 }} suffix=":" />
                 <NumberFlow
                     trend={-1}
                     value={mm}
                     digits={{ 1: { max: 5 } }}
                     format={{ minimumIntegerDigits: 2 }}
-                    suffix=" хвилин "
+                    suffix=":"
                 />
                 <NumberFlow
                     trend={-1}
                     value={ss}
                     digits={{ 1: { max: 5 } }}
                     format={{ minimumIntegerDigits: 2 }}
-                    suffix=" секунд "
                 />
             </div>
         </NumberFlowGroup>
