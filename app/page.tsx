@@ -5,17 +5,15 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { BookUser, Boxes, BrainCircuit, Gem, Network, PencilRuler, Star } from 'lucide-react'
 import Link from "next/link"
-import { useCallback } from "react"
+import { useCallback, useState, useEffect } from "react"
 import type { Engine } from "tsparticles-engine"
 import Particles from "react-tsparticles"
 import { loadTrianglesPreset } from "tsparticles-preset-triangles"
 import { ReviewCard } from "@/components/ReviewCard"
+import { CountdownTimer } from "@/components/CountdownTimer"
+import { TechBadge } from "@/components/TechBadge"
 
 const ENROLL_LINK = "https://www.udemy.com/course/opanovuemo-react/?couponCode=EC450CA830895E9DC657"
-
-function TechBadge({ name }: { name: string }) {
-  return <Badge className="text-sm">{name}</Badge>
-}
 
 export default function LandingPage() {
   const particlesInit = useCallback(async (engine: Engine) => {
@@ -26,7 +24,7 @@ export default function LandingPage() {
     <>
       <header className="sticky top-0 px-4 lg:px-6 h-14 flex items-center bg-gray-900 shadow-md z-50">
         <Link href="/" className="text-white font-bold text-base sm:text-lg truncate">
-          Udemy Курс "Опановуємо React"
+          Опановуємо React
         </Link>
         <nav className="ml-auto flex gap-4 sm:gap-6">
           <Link className="text-sm font-medium text-white hover:underline underline-offset-4 whitespace-nowrap" href={ENROLL_LINK}>
@@ -94,12 +92,21 @@ export default function LandingPage() {
                   Ексклюзивний всеохоплюючий <strong>React.js+Typescript</strong> курс Українською!
                 </p>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 sm:space-x-4">
-                <Button asChild size="lg" className="text-base sm:text-lg font-bold flex items-center gap-2">
-                  <Link href={ENROLL_LINK}>
-                    Купити зі знижкою!
-                  </Link>
-                </Button>
+              <div className="pt-8">
+                <div className="relative">
+                  <Button asChild size="lg" className="text-base sm:text-lg font-bold hover:text-black hover:bg-white transition-transform transform hover:scale-105">
+                    <Link href={ENROLL_LINK}>Купити Курс</Link>
+                  </Button>
+                  <div className="absolute -top-3 -right-3 bg-violet-600 text-white text-xs font-bold px-2 py-1 rounded">
+                    -85%
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div className="flex items-center justify-center text-lg sm:text-xl">
+                  До закінчення акції залишилось:
+                </div>
+                <CountdownTimer />
               </div>
             </div>
           </div>
